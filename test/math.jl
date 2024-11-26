@@ -239,6 +239,14 @@ using TheAlgorithms.Math
         @test_throws DomainError totient(-1)
     end
 
+    @testset "Math: Exponentiation in O(log n)" begin
+        @test exp_logn(0, 5)    == 0
+        @test exp_logn(3.14, 0) == 1
+        @test exp_logn(2, 5)    == 32
+        @test exp_logn(2, -2)   == 0.25
+        @test exp_logn(2, -5)   == 0.03125
+    end
+
     @testset "Math: Factorial Related" begin
         @test factorial_iterative(5) == 120
         @test factorial_iterative(0) == 1
