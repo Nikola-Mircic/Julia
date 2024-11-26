@@ -16,6 +16,27 @@ exp_logn(2, -2)   # returns 0.25
 exp_logn(2, -5)   # returns 0.03125
 ```
 
+# Implementation
+```julia
+function exp_logn(x::Number, n::Int)
+    if n == 0
+        return 1
+    elseif n < 0
+        return 1/exp_logn(x, -n)
+    else
+        tmp = exp_logn(x, div(n,2))
+        
+        if n%2 == 0
+            # If n is even, x^n = x^(n/2) * x^(n/2)
+            return tmp * tmp
+        else
+            # else, x^n = x^(n/2) * x^(n/2) * x
+            return tmp * tmp * x
+        end
+    end
+end
+```
+
 Contributed by [Nikola Mircic](https://www.github.com/Nikola-Mircic)
 """
 
