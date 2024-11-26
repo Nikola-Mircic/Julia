@@ -36,6 +36,7 @@ export combination
 export divisors
 export eratosthenes
 export euler_method
+export exp_logn
 export is_mersenne_prime
 export totient
 export factorial_iterative
@@ -101,6 +102,7 @@ include("combination.jl")
 include("divisors.jl")
 include("euler_method.jl")
 include("eulers_totient.jl")
+include("exp_logn.jl")
 include("factorial.jl")
 include("fibonacci.jl")
 include("floor.jl")
