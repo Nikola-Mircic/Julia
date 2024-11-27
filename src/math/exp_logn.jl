@@ -57,9 +57,3 @@ function exp_logn(x::Number, n::Int)
         end
     end
 end
-
-println(exp_logn(0, 5))
-println(exp_logn(3.14, 0))
-println(exp_logn(2, 5))
-println(exp_logn(2, -2))
-println(exp_logn(2, -5))
